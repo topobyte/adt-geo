@@ -7,7 +7,7 @@ public class TestBBoxString
 {
 
 	@Test
-	public void test()
+	public void testParse()
 	{
 		BBoxString box = BBoxString.parse("51.0,13,55.0,15.345345");
 
@@ -15,6 +15,17 @@ public class TestBBoxString
 		BBoxString parsed = BBoxString.parse(asString);
 
 		Assert.assertEquals(box.toBbox(), parsed.toBbox());
+	}
+
+	@Test
+	public void testCreate()
+	{
+		BBox box = new BBox(51.0, 13, 55.0, 15.345345);
+
+		BBoxString boxString = BBoxString.create(box);
+		BBox created = boxString.toBbox();
+
+		Assert.assertEquals(box, created);
 	}
 
 }

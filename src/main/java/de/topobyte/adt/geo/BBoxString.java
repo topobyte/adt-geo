@@ -61,6 +61,16 @@ public class BBoxString
 		return bbox;
 	}
 
+	public static BBoxString create(BBox box)
+	{
+		BBoxString bbox = new BBoxString();
+		bbox.lon1 = box.getLon1();
+		bbox.lat1 = box.getLat1();
+		bbox.lon2 = box.getLon2();
+		bbox.lat2 = box.getLat2();
+		return bbox;
+	}
+
 	@Override
 	public String toString()
 	{
