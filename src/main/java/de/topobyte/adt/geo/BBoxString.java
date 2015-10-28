@@ -64,7 +64,7 @@ public class BBoxString
 	@Override
 	public String toString()
 	{
-		return String.format("%f,%f %f,%f", lon1, lat1, lon2, lat2);
+		return String.format("%f,%f,%f,%f", lon1, lat1, lon2, lat2);
 	}
 
 	/**
