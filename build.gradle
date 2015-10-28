@@ -20,6 +20,8 @@ repositories {
 
 dependencies {
     compile 'com.vividsolutions:jts:1.13'
+
+    testCompile 'junit:junit:4.11'
 }
 
 task sourcesJar(type: Jar, dependsOn: classes) {
