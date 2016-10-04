@@ -98,7 +98,7 @@ public class BBox
 	}
 
 	/**
-	 * @return the seconds latitude
+	 * @return the second latitude
 	 */
 	public double getLat2()
 	{
