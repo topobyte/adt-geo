@@ -116,7 +116,7 @@ public class BBoxHelper
 		double height = lat1 - lat2;
 		double dLon = (factor - 1) / 2 * width;
 		double dLat = (factor - 1) / 2 * height;
-		box.set(lon1 - dLon, lat1 + dLat, lon2 + dLat, lat2 - dLat);
+		box.set(lon1 - dLon, lat1 + dLat, lon2 + dLon, lat2 - dLat);
 	}
 
 }
