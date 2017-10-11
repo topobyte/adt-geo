@@ -74,7 +74,7 @@ public class BBoxHelper
 		return bbox;
 	}
 
-	public static BBox minimumBoundingBox(BBox bbox,
+	public static void minimumBoundingBox(BBox bbox,
 			Collection<Coordinate> coordinates)
 	{
 		Coordinate c = coordinates.iterator().next();
@@ -103,7 +103,7 @@ public class BBoxHelper
 			}
 		}
 
-		return new BBox(minLon, maxLat, maxLon, minLat);
+		bbox.set(minLon, minLat, maxLon, maxLat);
 	}
 
 	public static void scaleByFactor(BBox box, double factor)
