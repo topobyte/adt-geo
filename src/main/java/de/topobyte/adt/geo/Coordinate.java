@@ -83,4 +83,48 @@ public class Coordinate
 		return m;
 	}
 
+	/**
+	 * Calculate a new coordinate that has the minimum in both dimensions.
+	 * 
+	 * @param coords
+	 *            a collection of coordinates.
+	 * @return a coordinate representing the minimum.
+	 */
+	public static Coordinate minimum(Collection<Coordinate> coords)
+	{
+		double lon = Double.POSITIVE_INFINITY;
+		double lat = Double.POSITIVE_INFINITY;
+		for (Coordinate c : coords) {
+			if (c.lon < lon) {
+				lon = c.lon;
+			}
+			if (c.lat < lat) {
+				lat = c.lat;
+			}
+		}
+		return new Coordinate(lon, lat);
+	}
+
+	/**
+	 * Calculate a new coordinate that has the maximum in both dimensions.
+	 * 
+	 * @param coords
+	 *            a collection of coordinates.
+	 * @return a coordinate representing the maximum.
+	 */
+	public static Coordinate maximum(Collection<Coordinate> coords)
+	{
+		double lon = Double.NEGATIVE_INFINITY;
+		double lat = Double.NEGATIVE_INFINITY;
+		for (Coordinate c : coords) {
+			if (c.lon > lon) {
+				lon = c.lon;
+			}
+			if (c.lat > lat) {
+				lat = c.lat;
+			}
+		}
+		return new Coordinate(lon, lat);
+	}
+
 }
