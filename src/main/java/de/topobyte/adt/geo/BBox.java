@@ -17,7 +17,7 @@
 
 package de.topobyte.adt.geo;
 
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 
 /**
  * @author Sebastian Kuerten (sebastian@topobyte.de)

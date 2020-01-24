@@ -22,7 +22,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    compile 'com.vividsolutions:jts:1.13'
+    compile 'org.locationtech.jts:jts-core:1.16.1'
 
     testCompile 'junit:junit:4.11'
 }
